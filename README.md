@@ -28,6 +28,8 @@ The Swin-Loupe model, with a gentle sparsity penalty, achieves a **+2.66%** abso
 The key feature of our module is its ability to learn, without any direct supervision, to focus on semantically meaningful and class-discriminative features. The visualizations below show the model's focus (green contours) on key regions like the head, eye, bill, and unique plumage patterns.
 
 <img width="600" height="486" alt="image" src="https://github.com/user-attachments/assets/df5bffef-f3fd-476e-b8af-b1eae645ec70" />
+
+
 *Fig. 1: Qualitative results from our best Swin-Loupe model. The module demonstrates a consistent ability to localize key discriminative features.*
 
 ---
@@ -58,7 +60,7 @@ This project uses `uv` for fast and reliable package management.
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/](https://github.com/)[narensen]/Loupe.git
+    git clone https://github.com/narensen/Loupe.git
     cd the-loupe
     ```
 
@@ -114,7 +116,7 @@ The output images will be saved in the `final_visualizations/` directory.
 
 For a complete technical description of the methodology and a full analysis of the results, please refer to our paper:
 
-**[Link to PDF of "The Loupe" Paper - e.g., on arXiv or your personal site]**
+**[arxiv.org]**
 
 ### Citation
 
