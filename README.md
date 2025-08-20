@@ -27,7 +27,7 @@ The Swin-Loupe model, with a gentle sparsity penalty, achieves a **+2.66%** abso
 
 The key feature of our module is its ability to learn, without any direct supervision, to focus on semantically meaningful and class-discriminative features. The visualizations below show the model's focus (green contours) on key regions like the head, eye, bill, and unique plumage patterns.
 
-![Qualitative Results Grid](figures/visualization_grid.jpg)
+<img width="600" height="486" alt="image" src="https://github.com/user-attachments/assets/df5bffef-f3fd-476e-b8af-b1eae645ec70" />
 *Fig. 1: Qualitative results from our best Swin-Loupe model. The module demonstrates a consistent ability to localize key discriminative features.*
 
 ---
