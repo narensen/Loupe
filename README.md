@@ -116,7 +116,7 @@ The output images will be saved in the `final_visualizations/` directory.
 
 For a complete technical description of the methodology and a full analysis of the results, please refer to our paper:
 
-**[arxiv.org]**
+**[soon to be in arxiv]**
 
 ### Citation
 
