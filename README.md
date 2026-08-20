@@ -125,7 +125,7 @@ If you find our work useful in your research, please consider citing our paper:
 ```bibtex
 @inproceedings{sengodan2025loupe,
   title={The Loupe: A Plug-and-Play Attention Module for Amplifying Discriminative Features in Vision Transformers},
-  author={Sengodan, Naren and Gemini},
+  author={Sengodan, Naren},
   booktitle={Proceedings of the IEEE INDICON},
   year={2025}
 }
