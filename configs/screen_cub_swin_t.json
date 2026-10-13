@@ -1,0 +1,38 @@
+{
+  "_notes": [
+    "Phase 1 screen (PROTOCOL.md): Swin-T on CUB-200-2011, 1 seed, L1 lambda=0.05 in every Loupe row, the",
+    "no-Loupe baseline in the same harness. Screening never opens the test set (eval_test false); set it true",
+    "only for final checkpoints. Row D's gate_pos is left null on purpose: run both placements unless B and",
+    "B2 differ by more than 2 points on validation, then pass --gate_pos explicitly."
+  ],
+  "timm_version": "1.0.30",
+  "model": "swin_tiny_patch4_window7_224.ms_in1k",
+  "num_classes": 200,
+  "data_dir": "./data",
+  "split_file": "splits/cub_val_frac0.1_seed0.json",
+  "val_frac": 0.1,
+  "split_seed": 0,
+  "img_size": 224,
+  "auto_augment": "rand-m9-mstd0.5",
+  "batch_size": 16,
+  "accum_steps": 2,
+  "opt": "lion",
+  "lr": 1e-5,
+  "weight_decay": 0.0,
+  "epochs": 50,
+  "eta_min": 1e-7,
+  "patience": 5,
+  "min_delta": 0.001,
+  "reg": {"kind": "l1", "lam": 0.05},
+  "seed": 0,
+  "num_workers": 2,
+  "eval_test": false,
+  "rows": {
+    "baseline": {"loupe": false},
+    "A":  {"mask_src": "s2",   "gate": "mult",     "gate_pos": "premerge"},
+    "B":  {"mask_src": "s2",   "gate": "residual", "gate_pos": "premerge", "alpha": 0.3},
+    "B2": {"mask_src": "s2",   "gate": "residual", "gate_pos": "postnorm", "alpha": 0.3},
+    "C":  {"mask_src": "s1s2", "gate": "mult",     "gate_pos": "premerge"},
+    "D":  {"mask_src": "s1s2", "gate": "residual", "gate_pos": null,       "alpha": 0.3}
+  }
+}

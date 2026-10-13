@@ -1,5 +1,6 @@
 import torch.nn as nn
 import timm
+from loupe_v2 import probe_transform
 
 class LoupeModule(nn.Module):
     def __init__(self, in_channels, reduction_factor=4):
@@ -37,6 +38,7 @@ class SwinWithLoupe(nn.Module):
         features_to_inspect = x.permute(0, 3, 1, 2)
 
         attention_map = self.loupe(features_to_inspect)
+        attention_map = probe_transform(attention_map, getattr(self, 'probe_mode', 'none'))  # inference-time probes only
         refined_features = features_to_inspect * attention_map
 
         x = refined_features.permute(0, 2, 3, 1)
